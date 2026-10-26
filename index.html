@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ExamArena | Competitive Exam Practice Platform</title>
+    <title>CyberShield | Advanced Cybersecurity Protection</title>
     <meta
       name="description"
-      content="ExamArena helps students practice mock tests, track performance, and stay consistent with their exam prep journey."
+      content="CyberShield helps businesses and individuals protect digital assets with proactive cybersecurity monitoring, risk analysis, and security operations."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,238 +17,321 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="topbar">
-      <div class="container nav">
-        <div class="brand" aria-label="ExamArena home">
-          <span class="brand-mark">E</span>
-          <span>ExamArena</span>
-        </div>
-
-        <nav class="nav-links" aria-label="Main navigation">
-          <a href="#home">Home</a>
-          <a href="#exams">Exams</a>
-          <a href="#practice">Practice</a>
-          <a href="#analytics">Analytics</a>
-          <a href="#resources">Resources</a>
-        </nav>
-
-        <button class="nav-btn">Login</button>
-      </div>
-    </header>
-
-    <main id="home">
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Prepare smarter. Perform better.</p>
-            <h1>Competitive exam prep that feels focused and motivating.</h1>
-            <p class="hero-text">
-              Practice real exam patterns, improve speed, and monitor your growth with
-              personalized mock tests and smart performance insights.
-            </p>
-
-            <div class="hero-actions">
-              <a href="#practice" class="primary-btn">Start Free Mock</a>
-              <a href="#exams" class="secondary-btn">Explore Exams</a>
-            </div>
-
-            <div class="hero-stats" aria-label="ExamArena statistics">
-              <div>
-                <strong>120K+</strong>
-                <span>students</span>
-              </div>
-              <div>
-                <strong>4.9/5</strong>
-                <span>rating</span>
-              </div>
-              <div>
-                <strong>35+</strong>
-                <span>mock exams</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="hero-visual" aria-label="Dashboard preview">
-            <div class="score-card glass-card">
-              <div class="mini-header">
-                <span>Live performance</span>
-                <span class="status-dot">●</span>
-              </div>
-              <div class="score-ring">
-                <div>82%</div>
-              </div>
-              <div class="score-meta">
-                <div>
-                  <strong>4.5h</strong>
-                  <span>Study time</span>
-                </div>
-                <div>
-                  <strong>36</strong>
-                  <span>Questions</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="floating-card glass-card">
-              <div class="mini-row">
-                <span class="label">Today's goal</span>
-                <span class="tag success">On track</span>
-              </div>
-              <h3>Speed + Accuracy Sprint</h3>
-              <div class="progress-line">
-                <span style="width: 78%"></span>
-              </div>
-              <small>78% completed</small>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="exams" class="section">
+    <div class="page-shell">
+      <header class="topbar">
         <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow dark">Popular exam tracks</p>
-            <h2>Choose your challenge</h2>
+          <div class="brand">
+            <div class="brand-mark">C</div>
+            <span>CyberShield</span>
           </div>
 
-          <div id="examGrid" class="exam-grid" aria-live="polite"></div>
+          <nav class="nav" id="navMenu">
+            <a href="#home">Home</a>
+            <a href="#solutions">Solutions</a>
+            <a href="#platform">Platform</a>
+            <a href="#security">Security</a>
+            <a href="#pricing">Pricing</a>
+          </nav>
+
+          <div class="nav-actions">
+            <a href="#platform" class="link-btn">Demo</a>
+            <button class="primary-btn">Get Started</button>
+          </div>
+
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
-      </section>
+      </header>
 
-      <section id="practice" class="section practice-section">
-        <div class="container practice-layout">
-          <div class="test-panel card">
-            <div class="panel-header">
-              <div>
-                <p class="eyebrow dark">Exam simulator</p>
-                <h3>Mock Test Center</h3>
-              </div>
-              <div class="timer-pill">
-                <span>⏱</span>
-                <strong id="timerValue">00:00</strong>
-              </div>
-            </div>
+      <main id="home">
+        <section class="hero">
+          <div class="container hero-grid">
+            <div class="hero-copy">
+              <p class="eyebrow">Trusted Digital Defense</p>
+              <h1>Fortify your business against evolving cyber threats.</h1>
+              <p class="hero-text">
+                Monitor vulnerabilities, detect threats early, and protect
+                customer trust with a modern security framework built for
+                real-world risk.
+              </p>
 
-            <div class="test-toolbar">
-              <label for="examSelect">Select exam</label>
-              <select id="examSelect" aria-label="Select exam"></select>
-              <button id="startBtn" class="primary-btn small">Start Test</button>
-            </div>
-
-            <div id="testArea" class="test-card hidden" aria-live="polite">
-              <div class="question-head">
-                <span id="questionNumber" class="question-badge">Question 1</span>
-                <button id="markQuestion" class="ghost-btn">Mark for review</button>
+              <div class="cta-row">
+                <a href="#platform" class="primary-btn">Book a Demo</a>
+                <a href="#solutions" class="secondary-btn">Explore Solutions</a>
               </div>
 
-              <h4 id="questionText" class="question-text"></h4>
-              <div id="optionsList" class="options-list"></div>
-
-              <div class="action-row">
-                <button id="prevBtn" class="secondary-btn small">Previous</button>
-                <button id="nextBtn" class="secondary-btn small">Next</button>
-                <button id="submitBtn" class="primary-btn small">Submit</button>
+              <div class="trust-row">
+                <div>
+                  <strong data-count="200">0</strong>
+                  <span>Security teams</span>
+                </div>
+                <div>
+                  <strong data-count="99">0</strong>
+                  <span>Threat coverage</span>
+                </div>
+                <div>
+                  <strong data-count="24">0</strong>
+                  <span>Live monitoring</span>
+                </div>
               </div>
             </div>
 
-            <div id="resultArea" class="result-card hidden" aria-live="polite"></div>
+            <div class="hero-visual">
+              <div class="glass-panel">
+                <div class="panel-head">
+                  <span class="dot green"></span>
+                  <span>Threat Intelligence</span>
+                  <span class="status-pill">Live</span>
+                </div>
+
+                <div class="ring-wrap">
+                  <div class="score-ring">
+                    <div>94%</div>
+                  </div>
+                </div>
+
+                <div class="mini-stats">
+                  <div>
+                    <span>Blocked</span>
+                    <strong>1,428</strong>
+                  </div>
+                  <div>
+                    <span>Alerts</span>
+                    <strong>24</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="floating-card">
+                <div class="floating-top">
+                  <span>Risk Level</span>
+                  <span class="risk-tag">Low</span>
+                </div>
+                <h3>Endpoint Security</h3>
+                <div class="progress-bar">
+                  <span style="width: 87%"></span>
+                </div>
+                <small>87% coverage</small>
+              </div>
+            </div>
           </div>
+        </section>
 
-          <aside class="side-panel">
-            <div class="card sidestep">
-              <h4>Question navigator</h4>
-              <div id="questionNav" class="question-nav" aria-live="polite"></div>
+        <section class="logo-strip">
+          <div class="container">
+            <p>Trusted by security-conscious teams worldwide</p>
+            <div class="logo-row">
+              <span>NovaBank</span>
+              <span>CloudCore</span>
+              <span>VisionGrid</span>
+              <span>SecureOps</span>
+              <span>MetaVault</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="solutions" class="section">
+          <div class="container">
+            <div class="section-heading">
+              <p class="eyebrow dark">What we provide</p>
+              <h2>Complete protection for every digital layer.</h2>
             </div>
 
-            <div class="card sidestep">
-              <h4>Today's plan</h4>
-              <ul class="plan-list">
-                <li><span class="dot purple"></span> Solve 20 arithmetic questions</li>
-                <li><span class="dot blue"></span> Revise 1 previous mock</li>
-                <li><span class="dot green"></span> Complete vocabulary block</li>
+            <div class="features-grid">
+              <article class="feature-card">
+                <div class="icon-box purple">01</div>
+                <h3>Vulnerability Management</h3>
+                <p>
+                  Detect weak points across your infrastructure before attackers
+                  can exploit them.
+                </p>
+              </article>
+
+              <article class="feature-card">
+                <div class="icon-box blue">02</div>
+                <h3>Threat Monitoring</h3>
+                <p>
+                  Real-time visibility into suspicious activity, attacks, and
+                  abnormal network behavior.
+                </p>
+              </article>
+
+              <article class="feature-card">
+                <div class="icon-box green">03</div>
+                <h3>Incident Response</h3>
+                <p>
+                  Respond quickly with guided workflows, alerts, and automated
+                  containment actions.
+                </p>
+              </article>
+
+              <article class="feature-card">
+                <div class="icon-box orange">04</div>
+                <h3>Compliance Readiness</h3>
+                <p>
+                  Align your systems with global security standards and audit
+                  requirements.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="platform" class="section platform-section">
+          <div class="container platform-wrap">
+            <div class="platform-copy">
+              <p class="eyebrow dark">Security platform</p>
+              <h2>Security operations without operational chaos.</h2>
+              <p>
+                CyberShield gives security teams a single place to assess risk,
+                identify threats, and act quickly — without overloading analysts.
+              </p>
+
+              <ul class="check-list">
+                <li>Attack surface visibility</li>
+                <li>Policy-driven threat detection</li>
+                <li>Faster response workflows</li>
+                <li>Unified control dashboards</li>
               </ul>
             </div>
-          </aside>
-        </div>
-      </section>
 
-      <section id="analytics" class="section analytics-section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow dark">Performance board</p>
-            <h2>Track your real growth</h2>
-          </div>
-
-          <div class="analytics-grid">
-            <div class="card analytics-card">
-              <div class="metric-top">
-                <span class="label">Accuracy</span>
-                <strong id="accuracyStat">88%</strong>
+            <div class="dashboard-card">
+              <div class="dash-head">
+                <span>Security Overview</span>
+                <span class="status-pill success">Healthy</span>
               </div>
-              <div class="bar"><span class="fill blue" style="width: 88%"></span></div>
-            </div>
 
-            <div class="card analytics-card">
-              <div class="metric-top">
-                <span class="label">Speed</span>
-                <strong id="speedStat">76%</strong>
+              <div class="dash-grid">
+                <div class="metric">
+                  <span>Critical</span>
+                  <strong>07</strong>
+                </div>
+                <div class="metric">
+                  <span>High</span>
+                  <strong>18</strong>
+                </div>
+                <div class="metric">
+                  <span>Medium</span>
+                  <strong>42</strong>
+                </div>
+                <div class="metric">
+                  <span>Low</span>
+                  <strong>96</strong>
+                </div>
               </div>
-              <div class="bar"><span class="fill purple" style="width: 76%"></span></div>
-            </div>
 
-            <div class="card analytics-card">
-              <div class="metric-top">
-                <span class="label">Concept Recall</span>
-                <strong id="recallStat">84%</strong>
+              <div class="line-chart">
+                <span class="line one"></span>
+                <span class="line two"></span>
               </div>
-              <div class="bar"><span class="fill green" style="width: 84%"></span></div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="resources" class="section resources-section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow dark">Study resources</p>
-            <h2>Focused learning blocks</h2>
+        <section id="security" class="section">
+          <div class="container">
+            <div class="section-heading">
+              <p class="eyebrow dark">Security toolkit</p>
+              <h2>Built for modern cybersecurity operations.</h2>
+            </div>
+
+            <div class="tool-grid">
+              <div class="tool-card">
+                <div class="tool-icon">🛡️</div>
+                <h3>Endpoint Defense</h3>
+                <p>Protect endpoints against malware, ransomware, and zero-day threats.</p>
+              </div>
+
+              <div class="tool-card">
+                <div class="tool-icon">🔍</div>
+                <h3>Threat Hunting</h3>
+                <p>Discover suspicious patterns and high-risk anomalies before they spread.</p>
+              </div>
+
+              <div class="tool-card">
+                <div class="tool-icon">⚙️</div>
+                <h3>Configuration Audit</h3>
+                <p>Keep infrastructure hardened with consistent policy verification.</p>
+              </div>
+
+              <div class="tool-card">
+                <div class="tool-icon">📡</div>
+                <h3>Network Security</h3>
+                <p>Inspect traffic flows, identify attack routes, and reduce exposure.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section security-check">
+          <div class="container check-wrap">
+            <div class="check-card">
+              <p class="eyebrow dark">Security checklist</p>
+              <h2>Start with the essentials.</h2>
+
+              <div class="check-list-grid">
+                <div class="check-item">
+                  <span class="check-mark">✓</span>
+                  <div>
+                    <strong>Patch management</strong>
+                    <p>Keep software updated across your environment.</p>
+                  </div>
+                </div>
+
+                <div class="check-item">
+                  <span class="check-mark">✓</span>
+                  <div>
+                    <strong>Access control</strong>
+                    <p>Limit privileges and enforce role-based access.</p>
+                  </div>
+                </div>
+
+                <div class="check-item">
+                  <span class="check-mark">✓</span>
+                  <div>
+                    <strong>Monitoring</strong>
+                    <p>Track events and detect unusual user behavior.</p>
+                  </div>
+                </div>
+
+                <div class="check-item">
+                  <span class="check-mark">✓</span>
+                  <div>
+                    <strong>Backup strategy</strong>
+                    <p>Recover quickly in the event of an attack.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="pricing" class="section cta-section">
+          <div class="container cta-box">
+            <div>
+              <p class="eyebrow dark">Built for teams that care about security</p>
+              <h2>Ready to secure your digital operations?</h2>
+            </div>
+            <a href="#" class="primary-btn">Talk to Security Team</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer-row">
+          <div class="brand">
+            <div class="brand-mark">C</div>
+            <span>CyberShield</span>
           </div>
 
-          <div class="resources-grid">
-            <article class="resource-card card">
-              <span class="resource-icon">📘</span>
-              <h4>Topic Notes</h4>
-              <p>Short, revision-friendly notes for formulas, grammar, and concepts.</p>
-            </article>
-
-            <article class="resource-card card">
-              <span class="resource-icon">🧠</span>
-              <h4>Quick Tricks</h4>
-              <p>Speed-building methods for aptitude, reasoning, and quantitative prep.</p>
-            </article>
-
-            <article class="resource-card card">
-              <span class="resource-icon">📝</span>
-              <h4>Practice Sets</h4>
-              <p>Daily mini test packs with full explanations and review checkpoints.</p>
-            </article>
-          </div>
+          <p>© 2026 CyberShield. Security by design.</p>
         </div>
-      </section>
-    </main>
+      </footer>
+    </div>
 
-    <footer class="footer">
-      <div class="container footer-row">
-        <div>
-          <div class="brand footer-brand">
-            <span class="brand-mark">E</span>
-            <span>ExamArena</span>
-          </div>
-        </div>
-        <p>© 2026 ExamArena. Built for consistent preparation.</p>
-      </div>
-    </footer>
-
-    <script src="app.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
