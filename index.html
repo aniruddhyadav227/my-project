@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ExamArena | Competitive Exam Practice Platform</title>
+    <meta
+      name="description"
+      content="ExamArena helps students practice mock tests, track performance, and stay consistent with their exam prep journey."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand" aria-label="ExamArena home">
+          <span class="brand-mark">E</span>
+          <span>ExamArena</span>
+        </div>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#exams">Exams</a>
+          <a href="#practice">Practice</a>
+          <a href="#analytics">Analytics</a>
+          <a href="#resources">Resources</a>
+        </nav>
+
+        <button class="nav-btn">Login</button>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Prepare smarter. Perform better.</p>
+            <h1>Competitive exam prep that feels focused and motivating.</h1>
+            <p class="hero-text">
+              Practice real exam patterns, improve speed, and monitor your growth with
+              personalized mock tests and smart performance insights.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#practice" class="primary-btn">Start Free Mock</a>
+              <a href="#exams" class="secondary-btn">Explore Exams</a>
+            </div>
+
+            <div class="hero-stats" aria-label="ExamArena statistics">
+              <div>
+                <strong>120K+</strong>
+                <span>students</span>
+              </div>
+              <div>
+                <strong>4.9/5</strong>
+                <span>rating</span>
+              </div>
+              <div>
+                <strong>35+</strong>
+                <span>mock exams</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Dashboard preview">
+            <div class="score-card glass-card">
+              <div class="mini-header">
+                <span>Live performance</span>
+                <span class="status-dot">●</span>
+              </div>
+              <div class="score-ring">
+                <div>82%</div>
+              </div>
+              <div class="score-meta">
+                <div>
+                  <strong>4.5h</strong>
+                  <span>Study time</span>
+                </div>
+                <div>
+                  <strong>36</strong>
+                  <span>Questions</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="floating-card glass-card">
+              <div class="mini-row">
+                <span class="label">Today's goal</span>
+                <span class="tag success">On track</span>
+              </div>
+              <h3>Speed + Accuracy Sprint</h3>
+              <div class="progress-line">
+                <span style="width: 78%"></span>
+              </div>
+              <small>78% completed</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="exams" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow dark">Popular exam tracks</p>
+            <h2>Choose your challenge</h2>
+          </div>
+
+          <div id="examGrid" class="exam-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="practice" class="section practice-section">
+        <div class="container practice-layout">
+          <div class="test-panel card">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow dark">Exam simulator</p>
+                <h3>Mock Test Center</h3>
+              </div>
+              <div class="timer-pill">
+                <span>⏱</span>
+                <strong id="timerValue">00:00</strong>
+              </div>
+            </div>
+
+            <div class="test-toolbar">
+              <label for="examSelect">Select exam</label>
+              <select id="examSelect" aria-label="Select exam"></select>
+              <button id="startBtn" class="primary-btn small">Start Test</button>
+            </div>
+
+            <div id="testArea" class="test-card hidden" aria-live="polite">
+              <div class="question-head">
+                <span id="questionNumber" class="question-badge">Question 1</span>
+                <button id="markQuestion" class="ghost-btn">Mark for review</button>
+              </div>
+
+              <h4 id="questionText" class="question-text"></h4>
+              <div id="optionsList" class="options-list"></div>
+
+              <div class="action-row">
+                <button id="prevBtn" class="secondary-btn small">Previous</button>
+                <button id="nextBtn" class="secondary-btn small">Next</button>
+                <button id="submitBtn" class="primary-btn small">Submit</button>
+              </div>
+            </div>
+
+            <div id="resultArea" class="result-card hidden" aria-live="polite"></div>
+          </div>
+
+          <aside class="side-panel">
+            <div class="card sidestep">
+              <h4>Question navigator</h4>
+              <div id="questionNav" class="question-nav" aria-live="polite"></div>
+            </div>
+
+            <div class="card sidestep">
+              <h4>Today's plan</h4>
+              <ul class="plan-list">
+                <li><span class="dot purple"></span> Solve 20 arithmetic questions</li>
+                <li><span class="dot blue"></span> Revise 1 previous mock</li>
+                <li><span class="dot green"></span> Complete vocabulary block</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="analytics" class="section analytics-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow dark">Performance board</p>
+            <h2>Track your real growth</h2>
+          </div>
+
+          <div class="analytics-grid">
+            <div class="card analytics-card">
+              <div class="metric-top">
+                <span class="label">Accuracy</span>
+                <strong id="accuracyStat">88%</strong>
+              </div>
+              <div class="bar"><span class="fill blue" style="width: 88%"></span></div>
+            </div>
+
+            <div class="card analytics-card">
+              <div class="metric-top">
+                <span class="label">Speed</span>
+                <strong id="speedStat">76%</strong>
+              </div>
+              <div class="bar"><span class="fill purple" style="width: 76%"></span></div>
+            </div>
+
+            <div class="card analytics-card">
+              <div class="metric-top">
+                <span class="label">Concept Recall</span>
+                <strong id="recallStat">84%</strong>
+              </div>
+              <div class="bar"><span class="fill green" style="width: 84%"></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="resources" class="section resources-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow dark">Study resources</p>
+            <h2>Focused learning blocks</h2>
+          </div>
+
+          <div class="resources-grid">
+            <article class="resource-card card">
+              <span class="resource-icon">📘</span>
+              <h4>Topic Notes</h4>
+              <p>Short, revision-friendly notes for formulas, grammar, and concepts.</p>
+            </article>
+
+            <article class="resource-card card">
+              <span class="resource-icon">🧠</span>
+              <h4>Quick Tricks</h4>
+              <p>Speed-building methods for aptitude, reasoning, and quantitative prep.</p>
+            </article>
+
+            <article class="resource-card card">
+              <span class="resource-icon">📝</span>
+              <h4>Practice Sets</h4>
+              <p>Daily mini test packs with full explanations and review checkpoints.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-row">
+        <div>
+          <div class="brand footer-brand">
+            <span class="brand-mark">E</span>
+            <span>ExamArena</span>
+          </div>
+        </div>
+        <p>© 2026 ExamArena. Built for consistent preparation.</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
